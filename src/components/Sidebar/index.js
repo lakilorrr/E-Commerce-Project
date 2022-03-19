@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom'
 const Sidebar = ({ openSidebar, handleSidebarStatus }) => {
     return (
         <SidebarContainer>
-            <aside className={`sidebar ${openSidebar && 'show-sidebar'}`}>
+            <aside className={`sidebar ${openSidebar ? 'show-sidebar' : ''}`}>
                 <div className='sidebar-header'>
                     <img src={logo} alt='comfy sloth' className='logo' />
                     <button className='close-btn' onClick={() => handleSidebarStatus(false)}>
