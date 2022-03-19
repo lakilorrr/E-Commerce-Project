@@ -1,3 +1,5 @@
 import Layout from './Layout'
+import PageHero from './PageHero'
+import Product from './Product'
 
-export { Layout }
+export { Layout, PageHero, Product }

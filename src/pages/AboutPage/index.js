@@ -1,5 +1,5 @@
 import React from 'react'
-import PageHero from '../../components/PageHero'
+import { PageHero } from '../../components'
 import aboutImg from '../../assets/hero-bcg.jpeg'
 import { Wrapper } from './style'
 
