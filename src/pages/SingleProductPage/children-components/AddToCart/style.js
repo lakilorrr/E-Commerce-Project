@@ -43,6 +43,7 @@ margin-top: 2rem;
 .btn {
   margin-top: 1rem;
   width: 140px;
+  text-align: center;
 }
 `
 
