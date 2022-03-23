@@ -47,7 +47,7 @@ const Filters = () => {
                         {/* company */}
                         <div className='form-control'>
                             <h5>company</h5>
-                            <select className='company' name='company' onChange={e => dispatch(changeFiltersAction(e.target.name, e.target.value))}>
+                            <select className='company' name='company' value={company} onChange={e => dispatch(changeFiltersAction(e.target.name, e.target.value))}>
                                 {companies.map((c, idx) => {
                                     return (
                                         <option key={idx} value={c}>
