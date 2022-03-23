@@ -43,7 +43,7 @@ const SingleProduct = () => {
                             {company}
                         </p>
                         <hr />
-                        {stock > 0 && <AddToCart {...singleProduct} />}
+                        {stock > 0 && <AddToCart product={singleProduct} />}
                     </section>
                 </div>
             </div>

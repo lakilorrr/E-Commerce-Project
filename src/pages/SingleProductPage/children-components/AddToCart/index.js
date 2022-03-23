@@ -1,9 +1,12 @@
 import React, { useState } from 'react'
 import { FaCheck, FaPlus, FaMinus } from 'react-icons/fa'
+import { useDispatch } from 'react-redux'
 import { Link } from 'react-router-dom'
-
+import { changeCartAction } from '../../../CartPage/store/actionCreators'
 import { Wrapper, AmountWrapper } from './style'
-const AddToCart = ({ id, stock, colors }) => {
+const AddToCart = ({ product }) => {
+    const { id, stock, colors } = product
+    const dispatch = useDispatch()
     const [colorIdx, setColorIdx] = useState(0)
     const [amount, setAmount] = useState(1)
     const increase = amount => {
@@ -21,6 +24,9 @@ const AddToCart = ({ id, stock, colors }) => {
         } else {
             setAmount(newAmount)
         }
+    }
+    const addToCart = (id, color, amount, product) => {
+        dispatch(changeCartAction({ id, color, amount, product }))
     }
     return (
         <Wrapper>
@@ -50,7 +56,7 @@ const AddToCart = ({ id, stock, colors }) => {
                         <FaPlus />
                     </button>
                 </AmountWrapper>
-                <Link to='/cart' className='btn'>
+                <Link to='/cart' className='btn' onClick={() => addToCart(id, colors[colorIdx], amount, product)}>
                     add to cart
                 </Link>
             </div>

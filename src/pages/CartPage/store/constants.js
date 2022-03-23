@@ -1,0 +1,7 @@
+
+export const CHANGE_SHIPPING_FEE = 'CHANGE_SHIPPING_FEE'
+export const CHANGE_AMOUNT = 'CHANGE_AMOUNT'
+export const ADD_TO_CART = 'ADD_TO_CART'
+export const REMOVE_ITEM = 'REMOVE_ITEM'
+export const CLEAR_CART = 'CLEAR_CART'
+export const COUNT_CARAT_TOTALS = 'COUNT_CARAT_TOTALS'
